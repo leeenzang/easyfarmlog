@@ -1,1 +1,1 @@
-web: gunicorn easyfarmlog.wsgi --log-file-
+web: gunicorn farmlogP.wsgi

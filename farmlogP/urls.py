@@ -34,6 +34,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('', include('farmlog.urls')),  # Include the farmlog URLs at the root
     path("admin/", admin.site.urls),
     path('users/', include('users.urls')),  
     path('farmlog/', include('farmlog.urls')), 

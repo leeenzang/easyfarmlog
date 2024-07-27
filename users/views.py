@@ -7,6 +7,10 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserSerializer
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, this is the home page!")
 
 # 회원가입뷰
 class RegisterView(generics.CreateAPIView):
