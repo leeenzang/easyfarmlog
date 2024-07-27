@@ -137,8 +137,9 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
 }
 
-CORS_ORIGIN_WHITELIST = [
+CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://main--dulcet-haupia-72cdfc.netlify.app'
 ]
 
 # Additional settings for Heroku
