@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-wiv4_#x&1lck!&90gow)=+$4h$+wqb)s3e_kk+^8-vnse9hs0l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['your-heroku-app-name.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['easyfarmlog-eaa5d9e10462.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -140,3 +140,7 @@ SIMPLE_JWT = {
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
 ]
+
+# Additional settings for Heroku
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
