@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-wiv4_#x&1lck!&90gow)=+$4h$+wqb)s3e_kk+^8-vnse9hs0l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG=True
 
-ALLOWED_HOSTS = ['easyfarmlog-eaa5d9e10462.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['farmlog-40624c11cff5.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
